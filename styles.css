@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dfdfdf;
+  min-height: 100vh;
+  font-family: "Exo", sans-serif;
+}
+
+.box {
+  width: calc(5rem* 3);
+  height: 5rem;
+  background-color: orangered;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+.box:hover {
+  cursor: pointer;
+}
+.box:hover span {
+  position: absolute;
+  width: 2rem;
+  height: 1.5rem;
+  background: #cdcdcd;
+  top: calc(calc(5rem* 0.55)* 0.85);
+  left: calc(calc(5rem* 0.55)* 0.65);
+  transition: all 0.5s ease-in-out;
+  border-radius: 20%;
+}
+.box:hover span::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 20%;
+  left: 30%;
+  background: red;
+  transition: all 0.4s ease-in-out;
+  animation: spin 2000ms infinite linear;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.box:hover .emoji {
+  transition: all 500ms ease-in-out 10ms;
+}
+.box:hover .emoji .smile__face {
+  top: 18%;
+  left: 18%;
+  transition: all 500ms ease-in-out;
+}
+.box:hover .emoji .smile__eyes--left {
+  left: 10px;
+  transition: all 400ms ease-in-out;
+}
+.box:hover .emoji .smile__eyes--right {
+  right: 2px;
+  transition: all 400ms ease-in-out;
+}
+.box:hover .emoji .smile__mouth {
+  left: 25px;
+  transition: all 400ms ease-in-out;
+}
+.box:hover .emoji .wow__face {
+  visibility: visible;
+  bottom: -7%;
+  right: -14%;
+  transition: all 500ms ease-in-out;
+}
+.box:hover .emoji .wow__eyes--left {
+  top: 3px;
+}
+.box:hover .emoji .wow__eyes--right {
+  top: -1px;
+}
+.box:hover .emoji .wow__mouth {
+  right: -10px;
+}
+.box .emoji {
+  width: 5rem;
+  height: 5rem;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-right: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+.box .emoji .smile__face {
+  background-color: yellow;
+  width: calc(5rem* 0.55);
+  height: calc(5rem* 0.55);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box .emoji .smile__eyes {
+  position: absolute;
+  left: calc(calc(5rem* 0.55)* 0.5);
+  top: calc(calc(5rem* 0.55)* 0.25);
+}
+.box .emoji .smile__eyes--left {
+  position: absolute;
+  border-radius: 50px;
+  background: #000;
+  width: calc(calc(5rem* 0.55)* 0.12);
+  height: calc(calc(5rem* 0.55)* 0.15);
+  left: calc(calc(5rem* 0.55)* 0.15);
+}
+.box .emoji .smile__eyes--right {
+  position: absolute;
+  border-radius: 50px;
+  background: #000;
+  width: calc(calc(5rem* 0.55)* 0.12);
+  height: calc(calc(5rem* 0.55)* 0.15);
+  right: calc(calc(5rem* 0.55)* 0.15);
+}
+.box .emoji .smile__mouth {
+  position: absolute;
+  background: #000;
+  width: calc(calc(5rem* 0.55)* 0.6);
+  height: calc(calc(5rem* 0.55)* 0.3);
+  bottom: calc(calc(5rem* 0.55)* 0.15);
+  left: calc(calc(5rem* 0.55)* 0.5);
+  transform: translatex(-50%);
+  border-radius: 8% 8% calc(calc(5rem* 0.55)* 0.3) calc(calc(5rem* 0.55)* 0.3);
+}
+.box .emoji .wow__face {
+  background-color: yellow;
+  width: calc(5rem* 0.55);
+  height: calc(5rem* 0.55);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -60%;
+  right: -60%;
+  visibility: hidden;
+}
+.box .emoji .wow__eyes {
+  position: absolute;
+  left: calc(calc(5rem* 0.55)* 0.5);
+  top: calc(calc(5rem* 0.55)* 0.25);
+}
+.box .emoji .wow__eyes--left {
+  position: absolute;
+  border-radius: 50px;
+  background: #000;
+  width: calc(calc(5rem* 0.55)* 0.12);
+  height: calc(calc(5rem* 0.55)* 0.15);
+  left: calc(calc(5rem* 0.55)* 0.2);
+}
+.box .emoji .wow__eyes--right {
+  position: absolute;
+  border-radius: 50px;
+  background: #000;
+  width: calc(calc(5rem* 0.55)* 0.12);
+  height: calc(calc(5rem* 0.55)* 0.15);
+  right: calc(calc(5rem* 0.55)* 0.2);
+}
+.box .emoji .wow__mouth {
+  position: absolute;
+  background: #000;
+  width: calc(calc(5rem* 0.55)* 0.3);
+  height: calc(calc(5rem* 0.55)* 0.3);
+  bottom: calc(calc(5rem* 0.55)* 0.15);
+  left: calc(calc(5rem* 0.55)* 0.5);
+  transform: translatex(-50%);
+  border-radius: 50%;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
